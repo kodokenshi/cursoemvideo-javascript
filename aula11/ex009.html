@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 11</title>
+    <style>
+      input#country {
+        width: 200px;
+        font: normal 18px arial;
+        border-radius: 10px;
+      }
+      input#answer {
+        font: normal 18px arial;
+        border-radius: 10px;
+      }
+      div#answer {
+        font: normal 18px arial;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body style="background: lightskyblue">
+    <h1>Em qual país você mora?</h1>
+    <input type="text" name="country" id="country" />
+    <input type="button" id="answer" value="Responder" onclick="answer()" />
+    <div id="answer"></div>
+    <script>
+      function answer() {
+        var div = document.querySelector("div#answer");
+        var answer = document.querySelector("input#country").value;
+
+        if (answer.toUpperCase() == "BRASIL") {
+          div.innerHTML = `Olha sóóó! <strong>VAI BRASIL</strong>!`;
+        } else {
+          div.innerHTML = `Caraca! Você é de <strong>outro país</strong>!`;
+        }
+      }
+    </script>
+  </body>
+</html>
